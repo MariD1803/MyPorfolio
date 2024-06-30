@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Porfolio</title>
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="./imagenes/myicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="index.js" defer></script>
+
+   
+   
+   
+     
+   
+   
+     
+</head>
+<body id="app" >
+    <div  :class="{ 'dark-template' : displayButton }"  class="light-template">
+    <header>
+        <div class="header">
+            <div class="options" :class="{'active': displayMenu}">
+                <button id="about-me" @click="displayOption = 'about-me'; closedBurgerMenu()" class="title">About Me</button>
+                <button id="education" @click="displayOption = 'education'; closedBurgerMenu()" class="title">Education</button>
+                <button id="skills" @click="displayOption = 'skills'; closedBurgerMenu()" class="title">Skills</button>
+                <button id="projects" @click="displayOption = 'projects'; closedBurgerMenu()" class="title">Projects</button>
+            </div>
+            <div class="switch-container">
+                <input type="checkbox" id="switch" class="switch-input" v-model="displayButton">
+                <label for="switch" class="switch-label" >
+                <span class="switch-inner"></span>
+                <span class="switch-switch"></span>
+                </label>
+            </div>
+        </div>
+        <div class="menu-activador burger">
+            <input type="checkbox" id="lanzador"  @click="displayBurgerMenu()" />
+            <label for="lanzador" class="label">
+              <span class="menu-activador-linea" ></span>
+              <span class="menu-activador-linea" ></span>
+              <span class="menu-activador-linea" ></span>
+            </label>
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <div v-if="displayOption == 'about-me'" class="about-me">
+            <div class="container-text">
+                <h1 style="color: #c088ff;">Mariangel Diaz</h1>
+                <h2>Desarrolladora Front-End</h2>
+                <div class="text">¡Welcome to my portfolio! I'm a front-end developer with a passion for creating visually apps and easy-to-use interfaces. I'm always eager of apply and extend my knowledge and experience to new projects. I focused in producing high-quality code that not only works well, but also looks great. I'm excited to share my projects with you and look forward to the opportunity to work together.</div>
+            </div>
+            <div class="container-img">
+                <img src="mari.png" class="img">
+                <div class="bottom-img"></div>
+                <svg class="buble top" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path-ligth" fill="#E8DAFF"  transform="translate(100 100)" />
+                </svg>
+                <svg class="buble bottom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path-dark" fill="#E8DAFF"  transform="translate(100 100)" />
+                </svg>
+                <svg class="buble left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path-ligth" fill="#E8DAFF"  transform="translate(100 100)" />
+                </svg>
+                <svg class="buble leftbottom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path-dark" fill="#E8DAFF"  transform="translate(100 100)" />
+                </svg>
+                <svg class="buble" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height: 139px; top: -2rem;">
+                    <path class="path-ligth" fill="#E8DAFF"  transform="translate(100 100)" />
+                </svg>
+            </div>
+            
+        </div>
+
+        <div v-if="displayOption == 'education'">Education</div>
+
+        <div v-if="displayOption == 'skills'">Skilss</div>
+
+        <div v-if="displayOption == 'projects'">Proyecjs</div>
+
+
+        
+    </div>
+    
+    <div class="footer">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+    </div>
+    </div>
+
+    
+    
+</body>
+</html>

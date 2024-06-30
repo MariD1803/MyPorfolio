@@ -1,0 +1,130 @@
+@media( max-width: 980px){
+    .title{
+        font-size: 1.2rem;
+    }
+    .container-text{
+        font-size: 0.8rem;
+    }
+    .text{
+        font-size: 1rem;
+    }
+    .container-img{
+        height: 20rem;
+        width: 20rem;
+    }
+    .img {
+        height: 19rem;
+    }
+    .container {
+        height: 80%;
+    }
+    .options {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 770px){
+    body{
+        overflow: auto;
+    }
+    .dark-template, .light-template{        
+        height: auto;
+    }
+    
+    .footer{
+        padding: 1rem;
+    }
+    .about-me {
+        margin: 4rem 0;
+    }
+}
+
+@media (max-width: 590px) {
+    
+    .about-me {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container-text {
+        width: 90%;
+    }
+    .container-img {
+        height: 17rem;
+        width: 17rem;
+    }
+    .img {
+        height: 16rem;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+    .switch-container {
+        width: 54px;
+        height: 34px;
+    }
+    .header {
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 470px) {
+    .switch-container {
+        width: 47px;
+        height: 27px;
+    }
+    .switch-inner {
+        width: 20px;
+        height: 20px;
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+    .header {
+        gap: 1.5rem;
+    }
+    header{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    .container-text {
+        font-size: 0.7rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .footer {
+        height: 10%;
+        font-size: 1.5rem;
+    }
+    .options{
+        display: none;
+    }
+    .active{
+        height: 99%;
+        width: 40%;
+        position: absolute;
+        left: 0;
+        /* background: red; */
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        justify-content: space-evenly;
+        z-index: 100;
+        box-shadow: 116px 0px 0px 186px rgb(0 0 0 / 80%);
+        border-radius: 8px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 230, 1) 35%, rgba(137, 142, 143, 1) 100%);
+    }
+    .dark-template .active{        
+        background: linear-gradient(56deg, rgba(0, 0, 0, 1) 0%, rgba(45, 9, 68, 1) 83%, rgb(36 2 57) 96%);
+    }
+    .burger{
+        display: block;
+    }
+    
+}
