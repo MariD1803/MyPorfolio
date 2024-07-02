@@ -23,19 +23,9 @@
     }
 }
 
-@media(max-width: 770px){
-    body{
-        overflow: auto;
-    }
-    .dark-template, .light-template{        
-        height: auto;
-    }
-    
-    .footer{
-        padding: 1rem;
-    }
-    .about-me {
-        margin: 4rem 0;
+@media (max-width: 780px) {
+    .contact-me{
+        font-size: 12px;
     }
 }
 
@@ -99,7 +89,6 @@
         font-size: 1rem;
     }
     .footer {
-        height: 10%;
         font-size: 1.5rem;
     }
     .options{
@@ -125,6 +114,10 @@
     }
     .burger{
         display: block;
+    }
+    .div-container-card-education{
+        width: 80%;
+        font-size: 0.9rem;
     }
     
 }

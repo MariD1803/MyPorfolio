@@ -27,10 +27,10 @@
     <header>
         <div class="header">
             <div class="options" :class="{'active': displayMenu}">
-                <button id="about-me" @click="displayOption = 'about-me'; closedBurgerMenu()" class="title">About Me</button>
+                <button id="about-me" @click="displayOption = 'about-me'; closedBurgerMenu()" class="title">About Me</button>                
+                <button id="projects" @click="displayOption = 'projects'; closedBurgerMenu()" class="title">Projects</button>
                 <button id="education" @click="displayOption = 'education'; closedBurgerMenu()" class="title">Education</button>
                 <button id="skills" @click="displayOption = 'skills'; closedBurgerMenu()" class="title">Skills</button>
-                <button id="projects" @click="displayOption = 'projects'; closedBurgerMenu()" class="title">Projects</button>
             </div>
             <div class="switch-container">
                 <input type="checkbox" id="switch" class="switch-input" v-model="displayButton">
@@ -58,9 +58,12 @@
                 <h1 style="color: #c088ff;">Mariangel Diaz</h1>
                 <h2>Desarrolladora Front-End</h2>
                 <div class="text">¡Welcome to my portfolio! I'm a front-end developer with a passion for creating visually apps and easy-to-use interfaces. I'm always eager of apply and extend my knowledge and experience to new projects. I focused in producing high-quality code that not only works well, but also looks great. I'm excited to share my projects with you and look forward to the opportunity to work together.</div>
+                <a href="mailto:mariangeldiazv2011@gmail.com">
+                    <button class="certificated-button" style="margin: 2rem 0;">Contact Me!</button>
+                </a>
             </div>
             <div class="container-img">
-                <img src="mari.png" class="img">
+                <img src="/imagenes/mari.png" class="img">
                 <div class="bottom-img"></div>
                 <svg class="buble top" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path class="path-ligth" fill="#E8DAFF"  transform="translate(100 100)" />
@@ -81,11 +84,54 @@
             
         </div>
 
-        <div v-if="displayOption == 'education'">Education</div>
+        
+        <div v-if="displayOption == 'projects'" class="container-education">
+            <div class='div-container-projects-and-education'   >
+                <div class='div-container-card' v-for="(item, index) in paginatedProjects" :key="index">
+                    <div class='imagen-projects'><img :src="item.logo" class="img-projects"></div>
+                    <div class='div-projects-rigth'>
+                        <h2>{{item.title}}</h2>
+                        <div   class='projects-description'>{{item.description}}</div>
+                        <div class="projects-icons"   style="display: flex">
+                            <div v-for="(icono, idx) in item.icons">{{icono}}</div>
+                        </div>
+                        <div class='container-buttons'>
+                            <a :href="item.deploy" ><button>Deploy</button></a>
+                            <a :href="item.repository" ><button>Repository</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>            
+            <div class="pagination">
+                <div v-for="pageNumber in pageCountProjects" :key="pageNumber" @click="setCurrentPage(pageNumber, 'project')" class="pagination-button">
+                    <i :class=" pageNumber == '1' ? 'fa-solid fa-circle-left' : 'fa-solid fa-circle-right'"></i>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="displayOption == 'education'" class="container-education">
+            <div class='div-container-projects-and-education'>
+                <div class='div-container-card-education' v-for="(item, index) in paginatedItems" :key="index">
+                  <h2>{{ item.title }}</h2>
+                  <div class="container-logo"><img :src="item.logo" class="logo"></div>
+                  <div class="container-institute">
+                    <div>Institute:</div>
+                    <div style="font-weight: bold;">{{ item.institute }}</div>
+                  </div>
+                  <div style=" width: 80%; text-align: justify;">{{ item.description }}</div>
+                  <div><a :href="item.certificate" target="_blank"><button class="certificated-button">Certificate</button></a></div>
+                </div>
+              </div>
+              <div class="pagination">
+                <div v-for="pageNumber in pageCount" :key="pageNumber" @click="setCurrentPage(pageNumber)" class="pagination-button">
+                    <i :class=" pageNumber == '1' ? 'fa-solid fa-circle-left' : 'fa-solid fa-circle-right'"></i>
+                </div>
+              </div>
+        </div>
 
         <div v-if="displayOption == 'skills'">Skilss</div>
 
-        <div v-if="displayOption == 'projects'">Proyecjs</div>
 
 
         

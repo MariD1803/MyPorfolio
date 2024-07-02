@@ -51,8 +51,8 @@
 /*Menu Toggle*/
 
 .menu-activador-linea {
-    height: 2px;
-    background-color: #000;
+    height: 3px;
+    background-color: rgba(137, 142, 143, 1);
     opacity: 1;
     transform: translateY(0) rotate(0);
     transition: all 0.3s;
