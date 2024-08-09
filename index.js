@@ -135,7 +135,6 @@ const app = Vue.createApp({
             }, '900')
         },
         closedBurgerMenu(){
-            console.log('hola')
             this.displayMenu = false 
         },
         setCurrentPage(pageNumber, page) {
