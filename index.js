@@ -37,25 +37,88 @@ const app = Vue.createApp({
                     title: 'Tres en Linea',
                     logo: '/imagenes/3enlinea.png',
                     description: 'The classic game is played on a board with nine points connected vertically and horizontally, plus two large diagonals. Game modes: \n Player 1 vs Player 2  \n CPU vs Player \n It uses Vue.js.',
-                    deploy: '',
-                    repository: '',
-                    icons: ['html', 'javascript', 'css', 'vue']
+                    deploy: 'https://tres-en-linea-topaz.vercel.app/',
+                    repository: 'https://github.com/MariD1803/TresEnLinea',
+                    icons: [
+                        { title: 'HTML', class: "fa-brands fa-html5"},
+                        { title: 'Javascript', class: "fa-brands fa-js"},
+                        { title: 'CSS', class: "fa-brands fa-css3-alt"},
+                        { title: 'Vue', class: "fa-brands fa-vuejs"}
+                    ]
                 },
                 {
                     title: 'Dulce Cerecita',
                     logo: '/imagenes/dc.png',
                     description: 'An electronic clothing and footwear store. It uses React Hooks for its dynamic functions, such as product rendering, adding a product to a cart, among others. The platform is designed to be cute and modern with the latest fashion products.',
-                    deploy: '',
-                    repository: '',
-                    icons: ['html', 'javascript', 'css']
+                    deploy: 'https://integradorjavascript-six.vercel.app/index.html',
+                    repository: 'https://github.com/MariD1803/IntegradorJS',
+                    icons: [
+                        { title: 'HTML', class: "fa-brands fa-html5"},
+                        { title: 'Javascript', class: "fa-brands fa-js"},
+                         { title: 'CSS', class: "fa-brands fa-css3-alt"},
+                        ]
                 },
                 {
                     title: '¡HEY! Store',
                     logo: '/imagenes/hs.png',
                     description: 'An e-commerce, bake sale themed. It uses JavaScript for its dynamic functions, such as product rendering, adding a product to a cart, among others. The platform is designed to be easy to use and navigate, with a clean and modern aesthetic.',
-                    deploy: '',
-                    repository: '',
-                    icons: ['html', 'javascript', 'css', 'react']
+                    deploy: 'https://github.com/MariD1803/ReactIntegrador',
+                    repository: 'https://react-integrador.vercel.app/',
+                    icons: [
+                        { title: 'HTML', class: "fa-brands fa-html5"},
+                        { title: 'Javascript', class: "fa-brands fa-js"},
+                        { title: 'CSS', class: "fa-brands fa-css3-alt"},
+                        { title: 'React', class: "fa-brands fa-react"}
+                    ]
+                }
+            ],
+            skillsContent: [
+                {
+                    title: 'Lenguajes de Programación',
+                    content: [
+                        { title: 'Javascript', class: "fa-brands fa-js"},
+                        {title: 'Python', class: "fa-brands fa-python"},
+                        {title: 'PHP', class: "fa-brands fa-php"}
+                    ]
+                },
+                {
+                    title: 'Front-End',
+                    content: [
+                        { title: 'HTML', class: "fa-brands fa-html5"}, 
+                        { title: 'CSS', class: "fa-brands fa-css3-alt"}, 
+                        { title: 'Vue', class: "fa-brands fa-vuejs"}, 
+                        { title: 'React', class: "fa-brands fa-react"}, 
+                        { title: 'Materialize', class: "fa-solid fa-m"}, 
+                        { title: 'Material UI', class: "fa-brands fa-wirsindhandwerk"},
+                        { title: 'Chakra UI', class: "fa-solid fa-bolt"}, 
+                        { title: 'StyledComponents', class: "fa-solid fa-hand-sparkles"}, 
+                        { title: 'Bootstrap', class: "fa-brands fa-bootstrap"}
+                    ]
+                },
+                {
+                    title: 'Diseño',
+                    content: [
+                        { title: 'Canva', class: "fa-solid fa-camera"}, 
+                        { title: 'Figma', class: "fa-brands fa-figma"}, 
+                    ]
+                },
+                {
+                    title: 'Control de Calidad',
+                    content: [
+                        { title: 'Selenium', class: "fa-solid fa-check"}, 
+                        { title: 'JMeter', class: "fa-solid fa-feather"}, 
+                        { title: 'SQL', class: "fa-solid fa-database"},
+                        { title: 'MySQL', class: "fa-solid fa-database"},
+                    ]
+                },
+                {
+                    title: 'Otras herramientas',
+                    content: [
+                        { title: 'GitHub', class: "fa-brands fa-github"}, 
+                        { title: 'Node', class: "fa-brands fa-node"}, 
+                        { title: 'Git', class: "fa-solid fa-code-branch"},
+                        { title: 'Npm', class: "fa-brands fa-npm"},
+                    ]
                 }
             ]
         }

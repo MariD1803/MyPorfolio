@@ -21,6 +21,14 @@
     .options {
         justify-content: space-evenly;
     }
+    .container-skills {
+        height: 100%;
+        padding: 1rem 3rem;
+        font-size: 14px;
+    }
+    .tag, .div-container-card-education, .div-container-card{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 780px) {
@@ -119,5 +127,41 @@
         width: 80%;
         font-size: 0.9rem;
     }
-    
+    .certificated-button, .btn {
+        margin: 0.5rem 0;
+        padding: 0.4rem;
+        font-size: 11px;
+    }
+    .container-skills {
+        height: 100%;
+        padding: 1rem 3rem;
+        font-size: 12px;
+    }
+    .div-container-card-education, .div-container-card{
+        font-size: 12px;
+    }
+    .div-container-card {
+        width: 90%;
+    }
+    .container-institute {
+        margin-top: 2rem;
+    }
+    .item-description{
+        width: 100%; 
+    }
+    .container-logo {
+        position: absolute;
+        right: 3%;
+        top: 5%;
+        max-width: 62px;
+        max-height: 108px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container-skills {
+        height: 100%;
+        padding: 0rem 1rem;
+        font-size: 12px;
+    }
 }

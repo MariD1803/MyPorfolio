@@ -93,11 +93,11 @@
                         <h2>{{item.title}}</h2>
                         <div   class='projects-description'>{{item.description}}</div>
                         <div class="projects-icons"   style="display: flex">
-                            <div v-for="(icono, idx) in item.icons">{{icono}}</div>
+                            <div v-for="(icono, idx) in item.icons"><i :class="icono.class"></i></div>
                         </div>
                         <div class='container-buttons'>
-                            <a :href="item.deploy" ><button>Deploy</button></a>
-                            <a :href="item.repository" ><button>Repository</button></a>
+                            <a :href="item.deploy" target="_blank" ><button class="deploy-btn btn">Deploy</button></a>
+                            <a :href="item.repository" target="_blank" ><button class="repository-btn btn">Repository</button></a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                     <div>Institute:</div>
                     <div style="font-weight: bold;">{{ item.institute }}</div>
                   </div>
-                  <div style=" width: 80%; text-align: justify;">{{ item.description }}</div>
+                  <div class="item-description">{{ item.description }}</div>
                   <div><a :href="item.certificate" target="_blank"><button class="certificated-button">Certificate</button></a></div>
                 </div>
               </div>
@@ -130,7 +130,19 @@
               </div>
         </div>
 
-        <div v-if="displayOption == 'skills'">Skilss</div>
+        <div v-if="displayOption == 'skills'" class="container-skills">
+            <h2 id="skills-titulo">Mis Habilidades </h2>
+    
+            <div v-for="skill in skillsContent">
+                <h3>{{skill.title}}</h3>
+                <div class="tags-container">
+                    <div  v-for="(e, idx) in skill.content" class="tag" :class="{'tag-inter': idx % 2 !== 0 }">
+                        <i :class="e.class"></i>
+                        <p style="margin: 0">{{e.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -138,8 +150,8 @@
     </div>
     
     <div class="footer">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-github"></i>
+        <a href="https://www.linkedin.com/in/mariangel-diaz-villanueva-60b20420b/" target="_blank" style="color: white"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/MariD1803" target="_blank"  style="color: white"><i class="fa-brands fa-github"></i></a>
     </div>
     </div>
 

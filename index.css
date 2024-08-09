@@ -244,6 +244,11 @@ body{
   position: relative;
 }
 
+.item-description{
+ width: 80%; 
+ text-align: justify; 
+}
+
 .div-container-projects-and-education {
   display: flex;
   flex-direction: column;
@@ -302,7 +307,7 @@ body{
 
 .certificated-button{
   margin: 1rem 0;
-  background: #9a4bf4;
+  background: #c088ff;
   color: rgb(255, 255, 255);
   border: none;
   padding: 0.6rem;
@@ -322,7 +327,7 @@ body{
 }
 .certificated-button:after {
   content: "";
-  background: #8135d7; 
+  background: #8135d7c7; 
   position: absolute;
   z-index: -1;
   padding: 16px 20px;
@@ -366,6 +371,59 @@ body{
   align-items: center;
   margin: 2% 0;
 }
+
+.repository-btn{
+  background: #d6c0ff !important;
+}
+
+.repository-btn:after{
+  background: rgb(153 137 214) !important;
+}
+
+.btn{
+  margin: 1rem 0;
+  background: #c088ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 8px 5px 10px -1px;
+  font-size: 14px;
+}
+.btn:hover {
+  color: #fff;
+
+}
+.btn:after {
+  content: "";
+  background:#8135d7c7; 
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
 .div-container-card {
   width: 80%;
     height: 300px;
@@ -422,6 +480,58 @@ body{
   max-height: 100%;
 }
 
+.dark-template .div-projects-rigth{
+  color: white;
+}
+
+/*Skills*/
+.container-skills{
+  height: 100%;
+  padding: 4rem 10rem;
+}
+
+.dark-template .container-skills{
+  color: white;
+}
+
+.tags-container{
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.tag{
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+    background: #d6c0ff;
+    width: max-content;
+    padding: 0px 0.5rem;
+    border-radius: 13px;
+    font-weight: 600;
+    padding: 0.3rem;
+    margin: 0; 
+    box-shadow: rgb(153 137 214) 15px 3px 0px 0px;
+    color: black;
+    cursor: pointer;
+}
+
+.tag:hover {
+  transform: rotateZ(347deg);
+}
+
+
+
+.tag-inter{
+  background: #c088ff;
+  box-shadow: #8135d7c7 15px 3px 0px 0px;
+}
 
 /*Footer*/
 
