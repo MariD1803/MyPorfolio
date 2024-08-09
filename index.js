@@ -23,7 +23,7 @@ const app = Vue.createApp({
                 { 
                     title: 'Software Tester QA',
                     institute: 'Education IT',
-                    logo: '/imagenes/educationit.png',
+                    logo: '/imagenes/eduit.jpg',
                     description: 'SQL queries, database creation, information analysis, database structure analysis, data migration to SQL. Analysis of requirements and definition of test cases for each functionality, management of progress reports, metric specifications and their monitoring. Integration test and regression by functionality. severity metrics. Automation in Selenium',
                     certificate: 'https://api.educacionit.com/pdf/certificados/Mariangel-Diaz-583068/51104'
                 },
